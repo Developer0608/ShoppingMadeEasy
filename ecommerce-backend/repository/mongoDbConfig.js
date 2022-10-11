@@ -10,7 +10,7 @@ class MongoDB {
                 if (err) {
                     console.error("[MONGO-DB-CONFIG]::Error:: Not Connected!!!", err);
                 } else {
-                    console.log("[MONGO-DB-CONFIG]::Connected!!!");
+                    console.log("[MONGO-DB-CONFIG]::", MONGO_URI);
                 }
             });
         }
