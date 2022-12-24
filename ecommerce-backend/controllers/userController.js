@@ -12,7 +12,8 @@ const signUp = async(req, res) => {
 
     const isUserAlreadySignedUp = await User.findOne({"email" : email}).lean();
     if(isUserAlreadySignedUp){
-        return res.status(401).json({err : 'User Already Signed Up with us'})
+        return res.status(200).json({'success' : 'Signed Up Successfully'});
+        // return res.status(401).json({err : 'User Already Signed Up with us'})
     }
 
     const encryptedPassword = await bcrypt.hash(password, 12);
